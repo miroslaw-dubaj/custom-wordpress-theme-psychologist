@@ -986,3 +986,14 @@ object {
 .gallery-caption {
 	display: block;
 }
+
+/*--------------------------------------------------------------
+## Custom CSS
+--------------------------------------------------------------*/
+
+.site-footer {
+	display: flex;
+	position: absolute;
+	bottom: 0;
+	z-index: -1;
+}
