@@ -23,7 +23,6 @@
 				Strona stworzona przez <a href="https://dubaj.dev/">dubaj.dev</a>
 		</div><!-- .site-info -->
 	</footer><!-- #colophon -->
-</div><!-- #page -->
 
 <?php wp_footer(); ?>
 

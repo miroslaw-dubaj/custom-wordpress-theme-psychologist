@@ -22,38 +22,36 @@
 
 <body <?php body_class(); ?>>
 <?php wp_body_open(); ?>
-<div id="page" class="site">
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'marzenakwasik' ); ?></a>
 
 	<header id="masthead" class="site-header">
-		<div class="site-branding">
-			<?php
-			the_custom_logo();
-			if ( is_front_page() && is_home() ) :
-				?>
-				<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-				<?php
-			else :
-				?>
-				<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
-				<?php
-			endif;
-			$marzenakwasik_description = get_bloginfo( 'description', 'display' );
-			if ( $marzenakwasik_description || is_customize_preview() ) :
-				?>
-				<p class="site-description"><?php echo $marzenakwasik_description; /* WPCS: xss ok. */ ?></p>
-			<?php endif; ?>
-		</div><!-- .site-branding -->
+		
 
-		<nav id="site-navigation" class="main-navigation">
-			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'marzenakwasik' ); ?></button>
-			<?php
-			wp_nav_menu( array(
-				'theme_location' => 'menu-1',
-				'menu_id'        => 'primary-menu',
-			) );
-			?>
-		</nav><!-- #site-navigation -->
+
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="#"><?php the_custom_logo(); ?></a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+  <?php
+
+wp_nav_menu( array(
+    'menu_id'           => 'primary-menu', // (string) The ID that is applied to the ul element which forms the menu. Default is the menu slug, incremented.
+	'walker'            => new WPDocs_Walker_Nav_Menu(),
+	'menu_class'        => 'navbar-nav mr-auto',
+	'container'         => '',
+    'theme_location'    => 'menu-1', // (string) Theme location to be used. Must be registered with register_nav_menu() in order to be selectable by the user.
+) );
+
+
+?>
+
+
+  </div>
+</nav>
 	</header><!-- #masthead -->
 
 	<div id="content" class="site-content">
