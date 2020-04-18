@@ -39,11 +39,11 @@
   <?php
 
 wp_nav_menu( array(
-    'menu_id'           => 'primary-menu', // (string) The ID that is applied to the ul element which forms the menu. Default is the menu slug, incremented.
+    'menu_id'           => 'primary-menu',
 	'walker'            => new WPDocs_Walker_Nav_Menu(),
 	'menu_class'        => 'navbar-nav mr-auto',
 	'container'         => '',
-    'theme_location'    => 'menu-1', // (string) Theme location to be used. Must be registered with register_nav_menu() in order to be selectable by the user.
+    'theme_location'    => 'menu-1'
 ) );
 
 

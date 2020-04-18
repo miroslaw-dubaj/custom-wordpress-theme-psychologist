@@ -1,11 +1,11 @@
 <?php get_header(); ?>
 
-<main class="bgimage">
-  <section class="container d-flex align-items-center">
-    <article class="row">
-      <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 justify-content-center">
-        <h5>Hello, world! Full width Hero-unit header</h5>
-        <p>This is a template for a simple marketing or informational website. It includes a large callout called the hero unit and three supporting pieces of content. Use it as a starting point to create something more unique.</p>
+<main class="hero">
+  <section class="container">
+    <article class="hero-text row justify-content-center align-items-center">
+      <div class="col-xl-10 col-lg-10 col-md-9 col-sm-9 col-xs-8">
+        <h2>Wierzę, że czlowiek może zmieniać sie i&nbsp;nie ustawać w&nbsp;przemianie tak długo, jak żyje</h2>
+        <h5>Karen Horney</h5>
         <p><a href="#" class="btn btn-primary btn-large">Learn more »</a></p>
       </div>
     </article>
