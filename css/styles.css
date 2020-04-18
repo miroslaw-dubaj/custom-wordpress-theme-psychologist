@@ -2,6 +2,10 @@
 ## Custom CSS
 --------------------------------------------------------------*/
 
+:root {
+    --main-bg-color: coral;
+}
+
 .hero {
     width:100%;
     height:100vh;
@@ -9,6 +13,7 @@
     background-repeat: no-repeat;
     background-position: center;
     background-size:cover;
+    box-shadow: 0px 10px 30px -10px rgba(0,0,0,0.75);
 }
 
 .hero-text {
@@ -23,7 +28,7 @@
 }
 
 footer {
-    background-color: #010101;
+    background-color: rgb(122, 189, 155);
     display: flex;
     width: 100%;
     justify-content: center;
@@ -33,15 +38,26 @@ footer {
 .btn {
     min-width: 50px;
     min-height: 30px;
-    border-radius: 50%;
+    border-radius: 50px;
+    box-shadow: 1px 1px 2px 0px rgba(0,0,0,0.75);
+}
+
+input, textarea {
+    border-radius: 50px !important;
+    padding: 15px !important;
+    border-color: transparent !important;
+    box-shadow: 0px 0px 1px 0px rgba(0,0,0,0.25);
+}
+
+textarea {
+    border-radius: 20px !important;
 }
 
 .btn-primary {
-    min-width: 50px;
-    min-height: 30px;
-    border-radius: 50%;
+    background-color: var(--main-bg-color);
+    border-color: var(--main-bg-color);
 }
 
 .page {
-    margin-bottom: 40vh;
+    margin-bottom: 350px;
 }
