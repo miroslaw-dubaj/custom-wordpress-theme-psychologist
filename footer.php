@@ -31,9 +31,9 @@
 			</article>
 			<article class="col-12 col-sm-12 col-md-12 col-lg-6 order-lg-2 order-first">
 				<h5 class="d-block d-md-none">Zostaw wiadomość</h5>
-				<form action="mailto:miroslaw.dubaj@gmail.com" method="post" enctype="text/plain">
+				<form id="form" action="mailto:miroslaw.dubaj@gmail.com" method="post" enctype="text/plain">
 					<div class="form-group">
-						<label class="d-none d-md-block" for="exampleFormControlInput1">Napisz do nas!</label>
+						<label class="d-none d-md-block" for="exampleFormControlInput1">Zostaw wiadomość</label>
 						<input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Podaj swój adres email">
 					</div>
 					<div class="form-group">
@@ -48,7 +48,7 @@
 				</form>
 			</article>
 			<article class="site-info d-flex justify-content-between d-md-block col-12 col-md-6 col-lg-3 order-lg-3">
-				<h5>Znajdź nas!</h5>
+				<h5>Sieci społecznościowe</h5>
 				<p>FACEBOOK</p>
 				<p>ZNANYLEKARZ</p>
 				<p>GOOGLE</p>
