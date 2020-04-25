@@ -35,8 +35,14 @@ nav.navbar.bg-light,
   background-color: var(--quaternary-color) !important;
 }
 
-nav h5.navbar-text {
+nav h2.navbar-text {
   margin: 0;
+  font-size: 1rem;
+}
+
+a.widget_text.navbar-brand:hover div.textwidget.custom-html-widget svg#svg g#svgg path#logo {
+  fill: #548434;
+  transition: all 1s ease-in-out;
 }
 
 ul,
@@ -118,7 +124,7 @@ textarea {
 
 .quote {
   background-color: var(--tertiary-color);
-  color: var(--fifth-color);
+  color: var(--secondary-color);
 }
 
 .quote-text {
@@ -146,7 +152,8 @@ textarea {
   font-size: 2rem;
 }
 
-.hero {
+.hero,
+.description {
   box-shadow: 0px 10px 30px -10px rgba(0, 0, 0, 0.75);
 }
 
@@ -172,6 +179,15 @@ textarea {
   height: 80vh;
 }
 
+.card {
+  border-radius: 1.25rem;
+}
+
+.card-img-top {
+  border-top-left-radius: 1.25rem;
+  border-top-right-radius: 1.25rem;
+}
+
 .row {
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
@@ -193,6 +209,15 @@ footer {
   padding: 30vh 0 0;
 }
 
+.widget.sfsi {
+  margin: 0;
+}
+
+#sfsi_holder,
+.sfsi_holders {
+  display: none;
+}
+
 @media screen and (max-width: 768px) {
   body {
     font-size: 12px;
@@ -200,6 +225,14 @@ footer {
 
   .page {
     margin-bottom: 70vh;
+  }
+
+  .quote-text--hero {
+    font-size: 2rem;
+  }
+
+  .quote-author--hero {
+    font-size: 1rem;
   }
 
   form input.form-control,
@@ -223,11 +256,19 @@ footer {
 
 @media screen and (max-width: 576px) {
   body {
-    font-size: 10px;
+    font-size: 0.7rem;
+  }
+
+  .nav-link.main-menu-link {
+    font-size: 1.25rem;
   }
 
   .page {
     margin-bottom: 70vh;
+  }
+
+  h1, h2 {
+    font-size: 1.5rem;
   }
 }
 

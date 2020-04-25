@@ -24,19 +24,19 @@
 
 <body <?php body_class(); ?>>
 	<?php wp_body_open(); ?>
-	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e('Skip to content', 'marzenakwasik'); ?></a>
+	<a class="skip-link screen-reader-text" href="#target"><?php esc_html_e('Skip to content', 'marzenakwasik'); ?></a>
 	<header class="site-header">
 		<section class="quote">
 			<?php if (!is_home() && !is_front_page()) :
 			?>
-				<h5 class="quote-text text-center mb-0 pt-1 pb-1">Wierzę, że człowiek może zmieniać sie i&nbsp;nie ustawać w&nbsp;przemianie tak długo, jak żyje - <span class="quote-author">Karen Horney</span></h5>
+				<?php dynamic_sidebar('fav-quote-sidebar'); ?>
 			<?php
 			endif;
 			?>
 		</section>
 	</header>
 	<nav class="navbar navbar-toggleable-sm navbar-expand-lg navbar-light bg-light sticky-top">
-		<a class="navbar-brand" href="#"><?php the_custom_logo(); ?></a>
+		<?php dynamic_sidebar('logo-sidebar'); ?>
 		<button class="navbar-toggler navbar-toggler-right collapsed position-relative" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 			<span> </span>
 			<span> </span>
@@ -52,10 +52,9 @@
 				'theme_location'    => 'menu-1'
 			));
 			?>
-			<h5 class="navbar-text">
-				Centrum Diagnozy i Terapii - Marzena Kwasik
-			</h5>
+			<hr class="d-block d-sm-none">
+			<div class="d-flex align-items-center">
+				<?php dynamic_sidebar('logo-sidebar'); ?><h2 class="navbar-text d-sm-block d-lg-none d-xl-block mb-0"> Centrum Diagnozy i Terapii <span class="d-none">-</span> Marzena Kwasik</h2>
+		</div>
 		</div>
 	</nav>
-
-	<div id="content" class="site-content">

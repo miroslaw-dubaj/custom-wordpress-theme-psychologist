@@ -11,9 +11,6 @@
  */
 
 ?>
-
-</div><!-- #content -->
-
 <footer id="colophon" class="site-footer container-fluid fixed-bottom">
 	<div class="container">
 		<section class="row">
@@ -48,10 +45,9 @@
 				</form>
 			</article>
 			<article class="site-info d-flex justify-content-between d-md-block col-12 col-md-6 col-lg-3 order-lg-3">
-				<h5>Sieci społecznościowe</h5>
-				<p>FACEBOOK</p>
+				<h5 class="d-none d-md-block">Sieci społecznościowe</h5>
+				<?php dynamic_sidebar( 'sidebar-1' ); ?>
 				<p>ZNANYLEKARZ</p>
-				<p>GOOGLE</p>
 				<p>MINIATURA MAPY?</p>
 			</article>
 		</section>
@@ -65,6 +61,9 @@
 		</section>
 	</div>
 </footer>
+<div id="scroll-down">
+	<div id="target"></div>
+</div>
 
 <?php wp_footer(); ?>
 

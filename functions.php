@@ -113,6 +113,30 @@ function marzenakwasik_widgets_init() {
 		'before_title'  => '<h2 class="widget-title">',
 		'after_title'   => '</h2>',
 	) );
+
+	register_sidebar( array(
+		'name'          => esc_html__( 'Fav Quote', 'marzenakwasik' ),
+		'id'            => 'fav-quote-sidebar',
+		'description'   => esc_html__( 'Add widgets here.', 'marzenakwasik' ),
+		'before_widget' => '<section class="quote">',
+		'after_widget'  => '</section>',
+	) );
+
+	register_sidebar( array(
+		'name'          => esc_html__( 'Quote Hero', 'marzenakwasik' ),
+		'id'            => 'quote-hero-sidebar',
+		'description'   => esc_html__( 'Add widgets here.', 'marzenakwasik' ),
+		'before_widget' => '<div class="col-xl-10 col-lg-10 col-md-9 col-sm-9 col-xs-8">',
+		'after_widget'  => '</div>',
+	) );
+
+	register_sidebar( array(
+		'name'          => esc_html__( 'SVG logo', 'marzenakwasik' ),
+		'id'            => 'logo-sidebar',
+		'description'   => esc_html__( 'Add SVG Logo here', 'marzenakwasik' ),
+		'before_widget' => '<a class="navbar-brand" href="https://marzenakwasik.pl/">',
+		'after_widget'  => '</a>',
+	) );
 }
 add_action( 'widgets_init', 'marzenakwasik_widgets_init' );
 
