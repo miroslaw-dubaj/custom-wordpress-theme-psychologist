@@ -46,9 +46,13 @@
 			</article>
 			<article class="site-info d-flex justify-content-between d-md-block col-12 col-md-6 col-lg-3 order-lg-3">
 				<h5 class="d-none d-md-block">Sieci społecznościowe</h5>
-				<?php dynamic_sidebar( 'sidebar-1' ); ?>
+				<?php dynamic_sidebar('sidebar-1'); ?>
+				<h5 class="d-none d-md-block">Dane adresowe</h5>
+				<p>Centrum Diagnozy i&nbsp;Terapii Marzena&nbsp;Kwasik</p>
+				<p>ul. Al. Piłsudskiego 31, I piętro, Gabinet 108</p>
+				<p>35-074, Rzeszów</p>
+
 				<p>ZNANYLEKARZ</p>
-				<p>MINIATURA MAPY?</p>
 			</article>
 		</section>
 		<section class="row">
@@ -65,8 +69,7 @@
 	<div id="target"></div>
 </div>
 
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
 <?php wp_footer(); ?>
-
 </body>
-
 </html>

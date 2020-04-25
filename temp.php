@@ -64,3 +64,8 @@ wp_nav_menu( array $args = array(
         <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
       </li>
     </ul> -->
+
+
+    wp_enqueue_script( 'marzenakwasik-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
+
+wp_enqueue_script( 'marzenakwasik-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );

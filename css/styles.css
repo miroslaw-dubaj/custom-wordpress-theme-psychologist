@@ -45,6 +45,20 @@ a.widget_text.navbar-brand:hover div.textwidget.custom-html-widget svg#svg g#svg
   transition: all 1s ease-in-out;
 }
 
+div.arrow::before {
+  border-color: red;
+  color: blue;
+}
+
+div.arrow {
+  border-color: red;
+}
+
+div.tooltip-inner {
+  background-color:var(--tertiary-color) !important;
+  color: var(--secondary-color) !important;
+}
+
 ul,
 ol {
   margin: 0;
