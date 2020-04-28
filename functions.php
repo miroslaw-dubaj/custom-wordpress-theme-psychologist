@@ -137,6 +137,14 @@ function marzenakwasik_widgets_init() {
 		'before_widget' => '<a class="navbar-brand" href="https://marzenakwasik.pl/" data-toggle="tooltip" data-placement="bottom" title="Centrum Diagnozy i Terapii - Marzena Kwasik">',
 		'after_widget'  => '</a>',
 	) );
+
+	register_sidebar( array(
+		'name'          => esc_html__( 'Footer form', 'marzenakwasik' ),
+		'id'            => 'footer-form',
+		'description'   => esc_html__( 'Add form sortcode', 'marzenakwasik' ),
+		'before_widget' => '<div>',
+		'after_widget'  => '</div>',
+	) );
 }
 add_action( 'widgets_init', 'marzenakwasik_widgets_init' );
 

@@ -2,9 +2,7 @@
 ## Custom CSS
 --------------------------------------------------------------*/
 
-@import url('https://fonts.googleapis.com/css2?family=Caveat&family=Kaushan+Script&family=Montserrat&family=Petit+Formal+Script&family=Raleway&display=swap');
-
-
+@import url("https://fonts.googleapis.com/css2?family=Caveat&family=Kaushan+Script&family=Montserrat&family=Petit+Formal+Script&family=Raleway&display=swap");
 
 :root {
   --primary-color: #548434;
@@ -19,15 +17,24 @@ html {
 }
 
 body {
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
 }
 
-h1, h2, h3, h4, h5 {
-  font-family: 'Raleway', sans-serif;
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: "Raleway", sans-serif;
 }
 
-nav {
+nav,
+.container > article > div.sheet {
   box-shadow: 0px 0px 30px -10px rgba(0, 0, 0, 0.75);
+}
+
+.container > article > div.sheet {
+  padding: 2rem;
 }
 
 nav.navbar.bg-light,
@@ -40,7 +47,11 @@ nav h2.navbar-text {
   font-size: 1rem;
 }
 
-a.widget_text.navbar-brand:hover div.textwidget.custom-html-widget svg#svg g#svgg path#logo {
+a.widget_text.navbar-brand:hover
+  div.textwidget.custom-html-widget
+  svg#svg
+  g#svgg
+  path#logo {
   fill: #548434;
   transition: all 1s ease-in-out;
 }
@@ -55,7 +66,7 @@ div.arrow {
 }
 
 div.tooltip-inner {
-  background-color:var(--tertiary-color) !important;
+  background-color: var(--tertiary-color) !important;
   color: var(--secondary-color) !important;
 }
 
@@ -133,7 +144,7 @@ textarea {
 }
 
 .page {
-  margin-bottom: 480px;
+  margin-bottom: 0;
 }
 
 .quote {
@@ -142,7 +153,7 @@ textarea {
 }
 
 .quote-text {
-  font-family: 'Kaushan Script', cursive;
+  font-family: "Kaushan Script", cursive;
   font-size: 1rem;
 }
 
@@ -151,7 +162,7 @@ textarea {
 }
 
 .quote-author {
-  font-family: 'Raleway', sans-serif;
+  font-family: "Raleway", sans-serif;
   font-size: 1rem;
 }
 
@@ -162,13 +173,18 @@ textarea {
 .signature {
   /* font-family: 'Petit Formal Script', cursive; */
   /* font-family: 'Kaushan Script', cursive; */
-  font-family: 'Caveat', cursive;
+  font-family: "Caveat", cursive;
   font-size: 2rem;
 }
 
 .hero,
 .description {
   box-shadow: 0px 10px 30px -10px rgba(0, 0, 0, 0.75);
+}
+
+.widget_text.col-xl-10 {
+  box-shadow: 0px -5px 20px 0px rgba(0,0,0,0.25);
+  padding: 4rem 2rem;
 }
 
 .site-header .navbar-light .nav-item.active > .nav-link:hover,
@@ -190,7 +206,17 @@ textarea {
 }
 
 .hero-text {
-  height: 80vh;
+  height: 85vh;
+}
+
+main {
+  position: relative;
+  z-index: 1;
+}
+
+.site-main section:only-child,
+.site-main div:only-child {
+  min-height: 82vh;
 }
 
 .card {
@@ -202,6 +228,15 @@ textarea {
   border-top-right-radius: 1.25rem;
 }
 
+.list-group-item:first-child,
+.list-group-item:last-child,
+.list-group-item+.list-group-item,
+.list-group-item {
+  border-radius: 50px;
+  margin: 1rem 0;
+  border-width: 1px;
+}
+
 .row {
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
@@ -209,9 +244,74 @@ textarea {
 
 .site-footer {
   display: flex;
-  position: fixed;
-  bottom: 0;
-  z-index: -1;
+  position: sticky;
+  z-index: 0;
+}
+
+.textwidget .wpcf7 label {
+  width: 100%;
+}
+
+.your-name input,
+.your-email input,
+.your-subject input {
+  border-radius: 50px;
+  padding: 15px;
+  border-color: transparent;
+  box-shadow: 0px 0px 1px 0px rgba(0, 0, 0, 0.25);
+  color: #666;
+  display: block;
+  width: 100%;
+  height: calc(1.5em + 0.75rem + 2px);
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  background-color: #fff;
+  background-clip: padding-box;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.your-message textarea {
+  padding: 15px;
+  border-color: transparent;
+  box-shadow: 0px 0px 1px 0px rgba(0, 0, 0, 0.25);
+  display: block;
+  width: 100%;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #495057;
+  background-color: #fff;
+  background-clip: padding-box;
+  transition: border-color 0.15s;
+}
+.wpcf7-form-control.wpcf7-submit {
+  min-width: 50px;
+  min-height: 30px;
+  border-radius: 50px;
+  box-shadow: 1px 1px 2px 0px rgba(0, 0, 0, 0.75);
+  outline: none;
+  background-color: var(--fifth-color);
+  border-color: var(--fifth-color);
+  margin-bottom: 0.5rem !important;
+  color: #fff;
+
+  display: inline-block;
+  font-weight: 400;
+  text-align: center;
+  vertical-align: middle;
+  user-select: none;
+  border: 1px solid transparent;
+  padding: 0.375rem 0.75rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+    border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.wpcf7-form-control.wpcf7-submit:hover {
+  background-color: var(--tertiary-color);
+  border-color: var(--tertiary-color);
 }
 
 footer {
@@ -220,7 +320,7 @@ footer {
   display: flex;
   width: 100%;
   justify-content: center;
-  padding: 30vh 0 0;
+  padding: 3rem 0 0;
 }
 
 .widget.sfsi {
@@ -237,8 +337,18 @@ footer {
     font-size: 12px;
   }
 
-  .page {
-    margin-bottom: 70vh;
+  .widget_text.col-xl-10 {
+    box-shadow: none;
+    padding: 1rem;
+  }
+
+  .site-main section:only-child,
+  .site-main div:only-child {
+    min-height: 67vh;
+  }
+
+  .btn-lg {
+    padding: 0.5rem 1rem;
   }
 
   .quote-text--hero {
@@ -260,11 +370,26 @@ footer {
     font-size: 0.5rem;
     margin: 0;
   }
+
+  .wpcf7 p {
+    margin: 0 0.5rem;
+    width: 43%;
+  }
+
+  .your-message textarea {
+    height: 10vh;
+  }
+
+  .wpcf7 form {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+  }
 }
 
 @media screen and (max-width: 768px) and (orientation: landscape) {
-  .page {
-    margin-bottom: 100vh;
+  .your-message textarea {
+    height: 10vh;
   }
 }
 
@@ -273,23 +398,18 @@ footer {
     font-size: 0.7rem;
   }
 
+
   .nav-link.main-menu-link {
     font-size: 1.25rem;
   }
 
-  .page {
-    margin-bottom: 70vh;
-  }
-
-  h1, h2 {
+  h1,
+  h2 {
     font-size: 1.5rem;
   }
 }
 
 @media screen and (max-width: 576px) and (min-height: 576px) {
-  .page {
-    margin-bottom: 55vh;
-  }
 }
 
 /*--------------------------------------------------------------

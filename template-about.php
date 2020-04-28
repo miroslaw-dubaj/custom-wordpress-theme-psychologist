@@ -32,7 +32,7 @@ get_header();
                         <img class="card-img-top" src="<?php echo $url ?>" alt="Card image cap">
                         <main class="card-body">
                             <h5 class="card-title">mgr Marzena Małgorzata Kwasik</h5>
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            <p class="card-text">Celem Centrum jest budowanie relacji opartej na wzajemnym dialogu na uważnym słuchaniu pacjenta i&nbsp;proponowaniu rozwiązań z&nbsp;wykorzystaniem wieloletniego doświadczenia klinicznego.</p>
                             <a href="#target" class="btn btn-lg btn-primary">Skontatuj się</a>
                         </main>
                     </article>
@@ -42,5 +42,4 @@ get_header();
     </div>
 </main><!-- #main -->
 
-<?php
-get_footer();
+<?php get_footer(); ?>
