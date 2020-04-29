@@ -33,7 +33,7 @@ get_header();
                         <main class="card-body">
                             <h5 class="card-title">mgr Marzena Małgorzata Kwasik</h5>
                             <p class="card-text">Celem Centrum jest budowanie relacji opartej na wzajemnym dialogu na uważnym słuchaniu pacjenta i&nbsp;proponowaniu rozwiązań z&nbsp;wykorzystaniem wieloletniego doświadczenia klinicznego.</p>
-                            <a href="#target" class="btn btn-lg btn-primary">Skontatuj się</a>
+                            <a href="#target" class="btn btn-lg btn-primary">Skontaktuj się</a>
                         </main>
                     </article>
                 </aside>

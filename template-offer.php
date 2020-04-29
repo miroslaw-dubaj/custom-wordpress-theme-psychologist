@@ -14,7 +14,6 @@ get_header();
             <article id="content" class="row pt-5 pb-5">
                 <div class="col-xl-12 sheet">
                     <h1><?php the_title() ?></h1>
-
                     <?php
                     while (have_posts()) :
 
@@ -24,6 +23,10 @@ get_header();
 
                     endwhile; // End of the loop.
                     ?>
+
+                    <div class="col-12 text-center">
+                        <a href="#target" class="btn btn-lg btn-primary">Skontaktuj się</a>
+                    </div>
                 </div>
             </article>
         </section>
