@@ -17,7 +17,7 @@
   <section class="container-fluid description">
     <section class="container">
       <article id="content" class="row pt-5 pb-5">
-        <div class="col-xl-12">
+        <div class="col-xl-12 description-text hideme">
           <?php
           while (have_posts()) :
             the_post();

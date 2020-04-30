@@ -12,7 +12,7 @@ get_header();
     <div class="container-fluid description">
         <div class="container">
             <article id="content" class="row pt-5 pb-5">
-                <section class="col-md-8">
+                <section class="col-md-8 showme">
                     <h1><?php the_title() ?></h1>
 
                     <?php

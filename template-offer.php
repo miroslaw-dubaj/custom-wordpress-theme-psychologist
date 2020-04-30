@@ -11,7 +11,7 @@ get_header();
 <main id="main" class="site-main">
     <section class="container-fluid description">
         <section class="container">
-            <article id="content" class="row pt-5 pb-5">
+            <article id="content" class="row pt-5 pb-5 showme">
                 <div class="col-xl-12 sheet">
                     <h1><?php the_title() ?></h1>
                     <?php

@@ -29,12 +29,18 @@ h5 {
 }
 
 nav,
-.container > article > div.sheet {
+.container > article > div.sheet,
+.sheet {
   box-shadow: 0px 0px 30px -10px rgba(0, 0, 0, 0.75);
 }
 
-.container > article > div.sheet {
+.container > article > div.sheet,
+.sheet {
   padding: 2rem;
+}
+
+.contact {
+  padding: 0 4rem 0 0;
 }
 
 nav.navbar.bg-light,
@@ -183,7 +189,7 @@ textarea {
 }
 
 .widget_text.col-xl-10 {
-  box-shadow: 0px -5px 20px 0px rgba(0,0,0,0.25);
+  box-shadow: 0px -5px 20px 0px rgba(0, 0, 0, 0.25);
   padding: 4rem 2rem;
 }
 
@@ -209,13 +215,57 @@ textarea {
   height: 85vh;
 }
 
+.hero-text .widget_text {
+  opacity: 0;
+  position: relative;
+  top: 100%;
+  transition: top 2s ease-out, opacity 1s ease-out;
+}
+
+.hero-text .widget_text.slide-up {
+  top: 0;
+  opacity: 1;
+}
+
+.card.text-center,
+aside.sheet {
+  opacity: 0;
+  position: relative;
+  left: 100%;
+  transition: left .5s ease-out, opacity 1s ease-out;
+}
+
+.card.text-center.roll-in,
+aside.sheet.roll-in {
+  left: 0;
+  opacity: 1;
+}
+
+.hero-text .btn,
+.arrows,
+.scroll {
+  opacity: 0;
+  transition: opacity 1s ease-out;
+}
+
+.hero-text .btn.fade-in,
+.arrows.fade-in,
+.scroll.fade-in {
+  opacity: 1;
+}
+
+.hideme,
+.showme {
+  opacity: 0;
+}
+
 main {
   position: relative;
   z-index: 1;
 }
 
-.site-main section:only-child,
-.site-main div:only-child {
+.site-main > section:only-child,
+.site-main > div:only-child {
   min-height: 82vh;
 }
 
@@ -230,7 +280,7 @@ main {
 
 .list-group-item:first-child,
 .list-group-item:last-child,
-.list-group-item+.list-group-item,
+.list-group-item + .list-group-item,
 .list-group-item {
   border-radius: 50px;
   margin: 1rem 0;
@@ -248,7 +298,7 @@ main {
   z-index: 0;
 }
 
-.textwidget .wpcf7 label {
+.wpcf7 label {
   width: 100%;
 }
 
@@ -285,6 +335,7 @@ main {
   background-clip: padding-box;
   transition: border-color 0.15s;
 }
+
 .wpcf7-form-control.wpcf7-submit {
   min-width: 50px;
   min-height: 30px;
@@ -307,6 +358,10 @@ main {
   line-height: 1.5;
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
     border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.contact .wpcf7-form-control.wpcf7-submit {
+  padding: 0.5rem 4rem;
 }
 
 .wpcf7-form-control.wpcf7-submit:hover {
@@ -342,8 +397,8 @@ footer {
     padding: 1rem;
   }
 
-  .site-main section:only-child,
-  .site-main div:only-child {
+  .site-main > section:only-child,
+  .site-main > div:only-child {
     min-height: 67vh;
   }
 
@@ -397,7 +452,6 @@ footer {
   body {
     font-size: 0.7rem;
   }
-
 
   .nav-link.main-menu-link {
     font-size: 1.25rem;
