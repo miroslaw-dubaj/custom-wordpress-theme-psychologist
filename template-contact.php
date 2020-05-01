@@ -13,7 +13,7 @@ get_header();
         <div class="container">
             <article id="content" class="row pt-5 pb-5 ">
                 <section class="col-md-6 col-lg-8 contact mb-5 order-md-1 showme">
-                    <h1><?php the_title() ?></h1>
+                    <h1><?php the_title() ?> z psychologiem - Rzeszów</h1>
 
                     <?php
                     while (have_posts()) :
@@ -57,8 +57,6 @@ get_header();
                         </svg>
                         <span>marzenakwasik</span>
                     </a>
-                    <h5 class="mt-4 mb-3">Sieci społecznościowe</h5>
-                    <?php dynamic_sidebar('sidebar-1'); ?>
                 </aside>
             </article>
             <section class="row">
@@ -73,7 +71,6 @@ get_header();
     </div>
 </main><!-- #main -->
 
-<script src="https://code.jquery.com/jquery-3.5.0.min.js" crossorigin="anonymous"></script>
 <?php wp_footer(); ?>
 </body>
 

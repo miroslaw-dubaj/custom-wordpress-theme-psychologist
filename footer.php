@@ -26,19 +26,15 @@
 				));
 				?>
 			</article>
-			<article class="col-12 col-sm-12 col-md-12 col-lg-6 order-lg-2 order-first">
+			<article class="col-12 col-sm-12 col-md-12 col-lg-6 order-lg-2">
 				<h5 class="d-block d-md-none">Zostaw wiadomość</h5>
 				<?php dynamic_sidebar('footer-form') ?>
 			</article>
-			<article class="site-info d-flex flex-wrap justify-content-between d-md-block col-12 col-md-6 col-lg-3 order-lg-3">
-				<h5 class="d-none d-md-block">Sieci społecznościowe</h5>
-				<?php dynamic_sidebar('sidebar-1'); ?>
+			<article class="site-info d-flex flex-wrap align-items-end justify-content-between d-md-block col-12 col-md-6 col-lg-3 order-lg-3 order-first">
 				<h5 class="d-none d-md-block">Dane adresowe</h5>
 				<p>Centrum Diagnozy i&nbsp;Terapii Marzena&nbsp;Kwasik</p>
 				<p>ul. Al. Piłsudskiego 31, I piętro, Gabinet 108</p>
 				<p>35-074, Rzeszów</p>
-
-				<p>ZNANYLEKARZ</p>
 			</article>
 		</section>
 		<section class="row">
@@ -55,7 +51,6 @@
 	<div id="target"></div>
 </div>
 
-<script src="https://code.jquery.com/jquery-3.5.0.min.js" crossorigin="anonymous"></script>
 <?php wp_footer(); ?>
 </body>
 

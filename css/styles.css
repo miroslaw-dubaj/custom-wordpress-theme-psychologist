@@ -20,12 +20,21 @@ body {
   font-family: "Montserrat", sans-serif;
 }
 
+::selection {
+  color: var(--quaternary-color);
+  background-color: var(--primary-color);
+}
+
 h1,
 h2,
 h3,
 h4,
 h5 {
   font-family: "Raleway", sans-serif;
+}
+
+p {
+  line-height: 1.8;
 }
 
 nav,
@@ -36,7 +45,7 @@ nav,
 
 .container > article > div.sheet,
 .sheet {
-  padding: 2rem;
+  padding: 4rem;
 }
 
 .contact {
@@ -219,7 +228,7 @@ textarea {
   opacity: 0;
   position: relative;
   top: 100%;
-  transition: top 2s ease-out, opacity 1s ease-out;
+  transition: top 1s ease-out, opacity .5s ease-out;
 }
 
 .hero-text .widget_text.slide-up {
@@ -227,12 +236,18 @@ textarea {
   opacity: 1;
 }
 
-.card.text-center,
+.contact .card.text-center,
 aside.sheet {
+  padding: 2rem;
   opacity: 0;
   position: relative;
   left: 100%;
-  transition: left .5s ease-out, opacity 1s ease-out;
+  transition: left 0.5s ease-out, opacity .5s ease-out;
+}
+
+.card.text-center,
+aside.sheet {
+  padding: 0;
 }
 
 .card.text-center.roll-in,
@@ -245,7 +260,7 @@ aside.sheet.roll-in {
 .arrows,
 .scroll {
   opacity: 0;
-  transition: opacity 1s ease-out;
+  transition: opacity .5s ease-out;
 }
 
 .hero-text .btn.fade-in,
@@ -278,12 +293,18 @@ main {
   border-top-right-radius: 1.25rem;
 }
 
+.list-group {
+  display: flex;
+  flex-flow: row wrap;
+  padding-bottom: 4rem;
+}
+
 .list-group-item:first-child,
 .list-group-item:last-child,
 .list-group-item + .list-group-item,
 .list-group-item {
   border-radius: 50px;
-  margin: 1rem 0;
+  margin: 1rem;
   border-width: 1px;
 }
 
@@ -419,6 +440,10 @@ footer {
     font-size: 12px;
     border-radius: 50px;
     padding: 0.5rem 1rem;
+  }
+
+  .contact {
+    padding: 0;
   }
 
   .copyright p {
@@ -657,4 +682,49 @@ a.arrows span:nth-of-type(3) {
   100% {
     opacity: 0;
   }
+}
+
+
+/*--------------------------------------------------------------
+# Accessibility
+--------------------------------------------------------------*/
+/* Text meant only for screen readers. */
+.screen-reader-text {
+	border: 0;
+	clip: rect(1px, 1px, 1px, 1px);
+	clip-path: inset(50%);
+	height: 1px;
+	margin: -1px;
+	overflow: hidden;
+	padding: 0;
+	position: absolute !important;
+	width: 1px;
+	word-wrap: normal !important; /* Many screen reader and browser combinations announce broken words as they would appear visually. */
+}
+
+.screen-reader-text:focus {
+	background-color: #f1f1f1;
+	border-radius: 3px;
+	box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
+	clip: auto !important;
+	clip-path: none;
+	color: #21759b;
+	display: block;
+	font-size: 14px;
+	font-size: 0.875rem;
+	font-weight: bold;
+	height: auto;
+	left: 5px;
+	line-height: normal;
+	padding: 15px 23px 14px;
+	text-decoration: none;
+	top: 5px;
+	width: auto;
+	z-index: 100000;
+	/* Above WP toolbar. */
+}
+
+/* Do not show the outline on the skip link target. */
+#content[tabindex="-1"]:focus {
+	outline: 0;
 }

@@ -235,10 +235,17 @@ class WPDocs_Walker_Nav_Menu extends Walker_Nav_Menu {
     }
 }
 
+
 /**
  * Enqueue scripts and styles.
  */
 function marzenakwasik_scripts() {
+	wp_deregister_script('jquery');
+    wp_register_script('jquery', get_template_directory_uri().'/js/jquery-3.4.1.min.js', false, null);
+    wp_enqueue_script('jquery');
+
+	wp_enqueue_script('popper', get_template_directory_uri().'/js/popper.min.js', array(), '', true );
+
 	wp_enqueue_style( 'marzenakwasik-style', get_stylesheet_uri() );
 
 	wp_enqueue_style( 'bootstrap.min', get_template_directory_uri().'/css/bootstrap.min.css');
