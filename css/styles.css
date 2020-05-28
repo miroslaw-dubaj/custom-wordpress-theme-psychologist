@@ -1,9 +1,6 @@
 /*--------------------------------------------------------------
 ## Custom CSS
 --------------------------------------------------------------*/
-
-@import url("https://fonts.googleapis.com/css2?family=Caveat&family=Kaushan+Script&family=Montserrat&family=Petit+Formal+Script&family=Raleway&display=swap");
-
 :root {
   --primary-color: #548434;
   --secondary-color: #111d11;
@@ -140,7 +137,8 @@ textarea {
   padding: 0.5rem 4rem;
 }
 
-.btn-primary {
+#cookie-notice.btn,
+.btn.btn-primary {
   outline: none;
   background-color: var(--primary-color);
   border-color: var(--primary-color);
@@ -186,8 +184,6 @@ textarea {
 }
 
 .signature {
-  /* font-family: 'Petit Formal Script', cursive; */
-  /* font-family: 'Kaushan Script', cursive; */
   font-family: "Caveat", cursive;
   font-size: 2rem;
 }
@@ -228,7 +224,7 @@ textarea {
   opacity: 0;
   position: relative;
   top: 100%;
-  transition: top 1s ease-out, opacity .5s ease-out;
+  transition: top 1s ease-out, opacity 0.5s ease-out;
 }
 
 .hero-text .widget_text.slide-up {
@@ -242,12 +238,7 @@ aside.sheet {
   opacity: 0;
   position: relative;
   left: 100%;
-  transition: left 0.5s ease-out, opacity .5s ease-out;
-}
-
-.card.text-center,
-aside.sheet {
-  padding: 0;
+  transition: left 0.5s ease-out, opacity 0.5s ease-out;
 }
 
 .card.text-center.roll-in,
@@ -260,7 +251,7 @@ aside.sheet.roll-in {
 .arrows,
 .scroll {
   opacity: 0;
-  transition: opacity .5s ease-out;
+  transition: opacity 0.5s ease-out;
 }
 
 .hero-text .btn.fade-in,
@@ -440,6 +431,11 @@ footer {
     font-size: 12px;
     border-radius: 50px;
     padding: 0.5rem 1rem;
+  }
+
+  .container > article > div.sheet,
+  .sheet {
+    padding: 2rem;
   }
 
   .contact {
@@ -684,47 +680,46 @@ a.arrows span:nth-of-type(3) {
   }
 }
 
-
 /*--------------------------------------------------------------
 # Accessibility
 --------------------------------------------------------------*/
 /* Text meant only for screen readers. */
 .screen-reader-text {
-	border: 0;
-	clip: rect(1px, 1px, 1px, 1px);
-	clip-path: inset(50%);
-	height: 1px;
-	margin: -1px;
-	overflow: hidden;
-	padding: 0;
-	position: absolute !important;
-	width: 1px;
-	word-wrap: normal !important; /* Many screen reader and browser combinations announce broken words as they would appear visually. */
+  border: 0;
+  clip: rect(1px, 1px, 1px, 1px);
+  clip-path: inset(50%);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute !important;
+  width: 1px;
+  word-wrap: normal !important; /* Many screen reader and browser combinations announce broken words as they would appear visually. */
 }
 
 .screen-reader-text:focus {
-	background-color: #f1f1f1;
-	border-radius: 3px;
-	box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
-	clip: auto !important;
-	clip-path: none;
-	color: #21759b;
-	display: block;
-	font-size: 14px;
-	font-size: 0.875rem;
-	font-weight: bold;
-	height: auto;
-	left: 5px;
-	line-height: normal;
-	padding: 15px 23px 14px;
-	text-decoration: none;
-	top: 5px;
-	width: auto;
-	z-index: 100000;
-	/* Above WP toolbar. */
+  background-color: #f1f1f1;
+  border-radius: 3px;
+  box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
+  clip: auto !important;
+  clip-path: none;
+  color: #21759b;
+  display: block;
+  font-size: 14px;
+  font-size: 0.875rem;
+  font-weight: bold;
+  height: auto;
+  left: 5px;
+  line-height: normal;
+  padding: 15px 23px 14px;
+  text-decoration: none;
+  top: 5px;
+  width: auto;
+  z-index: 100000;
+  /* Above WP toolbar. */
 }
 
 /* Do not show the outline on the skip link target. */
 #content[tabindex="-1"]:focus {
-	outline: 0;
+  outline: 0;
 }

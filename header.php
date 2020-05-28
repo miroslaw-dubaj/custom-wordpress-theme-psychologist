@@ -19,6 +19,19 @@
 	<meta charset="<?php bloginfo('charset'); ?>">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="google-site-verification" content="YVv1HsIF2wMcrONf5-kmaHgRiIgdaamDAnQCrd9c_a0" />
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-166804680-1"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+
+		function gtag() {
+			dataLayer.push(arguments);
+		}
+		gtag('js', new Date());
+
+		gtag('config', 'UA-166804680-1');
+	</script>
+
 	<link rel="profile" href="https://gmpg.org/xfn/11">
 	<?php wp_head(); ?>
 </head>
@@ -56,6 +69,6 @@
 			<hr class="d-block d-sm-none">
 			<div class="d-flex align-items-center">
 				<?php dynamic_sidebar('logo-sidebar'); ?><h2 class="navbar-text d-sm-block d-lg-none d-xl-block mb-0"> Centrum Diagnozy i Terapii <span class="d-none">-</span> Marzena Kwasik</h2>
-		</div>
+			</div>
 		</div>
 	</nav>

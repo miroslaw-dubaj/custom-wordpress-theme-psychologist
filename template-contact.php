@@ -27,7 +27,7 @@ get_header();
                     endwhile; // End of the loop.
                     ?>
                 </section>
-                <aside class="col-md-6 col-lg-4 sheet mb-5 order-md-2 order-first">
+                <aside class="col-md-6 contact col-lg-4 sheet mb-5 order-md-2 order-first">
                     <img class="img-thumbnail mb-4" src="<?php echo $url ?>" alt="Card image cap">
                     <h4>Centrum Diagnozy i&nbsp;Terapii Marzena&nbsp;Kwasik</h4>
                     <a class="nav-link" href="https://goo.gl/maps/dTQCH5SPMDRyp7aM7" target="_blank" data-toggle="tooltip" data-placement="left" title="Adres">ul.&nbsp;Al.&nbsp;Piłsudskiego&nbsp;31, I&nbsp;piętro, Gabinet&nbsp;108 35-074,&nbsp;Rzeszów</a>

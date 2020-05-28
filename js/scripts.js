@@ -23,21 +23,21 @@ $(document).ready(function () {
   });
 
   $('[data-toggle="tooltip"]').tooltip();
-  setTimeout($(".hero-text .widget_text").addClass("slide-up"), 500);
+  setTimeout($(".hero-text .widget_text").addClass("slide-up"), 200);
   $(".hero-text .btn")
-    .delay(1000)
+    .delay(400)
     .queue(function (next) {
       $(this).addClass("fade-in");
       next();
     });
   $(".arrows")
-    .delay(2000)
+    .delay(800)
     .queue(function (next) {
       $(this).addClass("fade-in");
       next();
     });
   $(".scroll")
-    .delay(1500)
+    .delay(600)
     .queue(function (next) {
       $(this).addClass("fade-in");
       next();

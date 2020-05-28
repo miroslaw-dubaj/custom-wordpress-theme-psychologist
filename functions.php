@@ -252,7 +252,9 @@ function marzenakwasik_scripts() {
 
 	wp_enqueue_style( 'styles', get_template_directory_uri().'/css/styles.css');
 
-	wp_enqueue_script( 'bootstrap.bundle.min', get_template_directory_uri() . '/js/bootstrap.bundle.min.js', array(), '', true );
+	wp_enqueue_style('google-fonts-poppins', 'https://fonts.googleapis.com/css2?family=Caveat&family=Kaushan+Script&family=Montserrat&family=Raleway&display=swap', array(), null, 'all' );
+
+	wp_enqueue_script( 'bootstrap', get_template_directory_uri() . '/js/bootstrap.min.js', array(), '', true );
 
 	wp_enqueue_script( 'scripts', get_template_directory_uri() . '/js/scripts.js', array(), '', true );
 
